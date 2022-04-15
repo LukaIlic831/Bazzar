@@ -112,9 +112,13 @@ const Shopcategories = ({ games, genres }) => {
             setLoading(true);
             const { data } = await axios.get(`https://api.rawg.io/api/games?key=59609a52ddb8440ca460beb7b1ead084&dates=${year}-01-01,${year}-12-31`)
             if (checkedCategories.length > 0 && checkedStars.length > 0) {
+                console.log(data)
                 data.results.map(item => item.genres.map(elem => {
                     if (checkedCategories.includes(elem.name) && checkedStars.includes(`${Math.ceil(item.rating)}`)) {
-                        selectedgames.push(item);
+                        if(!selectedgames.includes(item))
+                        {
+                            selectedgames.push(item)
+                        }
                     }
 
                 }))
@@ -126,6 +130,7 @@ const Shopcategories = ({ games, genres }) => {
                     setnoResults(false) 
                 }
                 document.querySelector('.shop__items--buttons').style.display = "none";
+                console.log(selectedgames)
                 setsubmitGames(selectedgames)
             }
 
@@ -165,7 +170,7 @@ const Shopcategories = ({ games, genres }) => {
                 setsubmitGames(selectedgames)
             }
 
-            else if (year) {
+            else if (year && checkedCategories.length == 0 && checkedStars.length == 0) {
                 document.querySelector('.shop__items--buttons').style.display = "none";
                 setsubmitGames(data.results)
             }
