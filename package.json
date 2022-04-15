@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@fortawesome/free-brands-svg-icons": "^6.1.1",
+    "@fortawesome/free-solid-svg-icons": "^6.1.1",
     "@splidejs/react-splide": "^0.6.20",
     "@testing-library/jest-dom": "^5.16.2",
     "@testing-library/react": "^12.1.4",
