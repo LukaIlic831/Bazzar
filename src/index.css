@@ -1330,6 +1330,13 @@ footer {
 
 @media (max-width:1024px) {
 
+  .header__slider{
+    padding-left: 0;
+  }
+
+  .header__blocks{
+    padding-left: 0;
+  }
 
  .header__wrapper{
    flex-direction: column;
