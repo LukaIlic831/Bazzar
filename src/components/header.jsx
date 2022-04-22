@@ -14,20 +14,28 @@ const Header = () => {
             <div className="header__wrapper">
                 <div className="header__big--img">
                 </div>
-                <Splide className="header__slider"
-                    options={{
-                        arrows: false,
-                    }}>
-                    <SplideSlide className="header__slider--para" >
-                        <img className='sliderImg' src={img3} alt="" />
-                    </SplideSlide>
-                    <SplideSlide className="header__slider--para">
-                        <img className='sliderImg' src={img1} alt="" />
-                    </SplideSlide>
-                    <SplideSlide className="header__slider--para">
-                        <img className='sliderImg' src={img2} alt="" />
-                    </SplideSlide>
-                </Splide>
+                <div className="row__slider">
+                    <Splide className="header__slider"
+                        options={{
+                            arrows: false,
+                            autoplay: true,
+                            type: 'loop',
+                            perPage: 1,
+                            interval: 1800,
+                            pagination: true
+
+                        }}>
+                        <SplideSlide className="header__slider--para" >
+                            <img className='sliderImg' src={img3} alt="" />
+                        </SplideSlide>
+                        <SplideSlide className="header__slider--para">
+                            <img className='sliderImg' src={img1} alt="" />
+                        </SplideSlide>
+                        <SplideSlide className="header__slider--para">
+                            <img className='sliderImg' src={img2} alt="" />
+                        </SplideSlide>
+                    </Splide>
+                </div>
                 <div className="header__blocks">
                     <div className="header__block">
                     </div>

@@ -134,6 +134,7 @@ img {
   cursor: pointer;
 }
 
+
 .nav__logo {
   cursor: pointer;
 }
@@ -1098,6 +1099,7 @@ footer {
   display: flex;
   margin: 10px 0;
   font-size: 15px;
+  flex-wrap: wrap;
 }
 
 .product__para--category p,
@@ -1134,6 +1136,7 @@ footer {
   display: flex;
   align-items: center;
   margin: 10px 0;
+  flex-wrap: wrap;
 }
 
 .product__para--platforms span {
@@ -1334,7 +1337,13 @@ footer {
     padding-left: 0;
   }
 
+  .header__slider{
+    width: 100%;
+
+  }
+
   .header__blocks{
+    display: none;
     padding-left: 0;
   }
 
@@ -1375,7 +1384,7 @@ footer {
 
 .sliderImg {
   width: 100%;
-  height: 500px;
+  height: auto;
 }
 
 .header__menu{
@@ -1448,6 +1457,7 @@ footer {
 
   .product__para{
     width: 100%;
+    padding-left: 0;
   }
 
   .product__para--title{
@@ -1615,5 +1625,21 @@ footer {
 .shop__item--para .star{
   font-size: 16px;
 }
+
+.nav__logo{
+  text-align: center;
+}
+
+.nav__logo img{
+  width: 80%;
+}
+
+}
+
+@media (max-width:400px) {
+
+  .nav__logo{
+    padding-right: 180px;
+  }
 
 }
