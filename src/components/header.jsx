@@ -18,10 +18,6 @@ const Header = () => {
                     <Splide className="header__slider"
                         options={{
                             arrows: false,
-                            autoplay: true,
-                            type: 'loop',
-                            perPage: 1,
-                            interval: 1800,
                             pagination: true
 
                         }}>
